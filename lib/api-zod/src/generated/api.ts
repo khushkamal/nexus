@@ -14,3 +14,26 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * Submit a contact inquiry from the portfolio
+ * @summary Submit contact form
+ */
+export const submitContactBodyNameMin = 2;
+
+export const submitContactBodyMessageMin = 10;
+
+export const SubmitContactBody = zod.object({
+  name: zod.string().min(submitContactBodyNameMin),
+  email: zod.string().email(),
+  company: zod.string().optional(),
+  message: zod.string().min(submitContactBodyMessageMin),
+  budget: zod
+    .enum(["under-10k", "10k-50k", "50k-100k", "100k-plus", "not-sure"])
+    .optional(),
+});
+
+export const SubmitContactResponse = zod.object({
+  success: zod.boolean(),
+  message: zod.string(),
+});

@@ -5,9 +5,6 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export type ContactRequestBudget =
   (typeof ContactRequestBudget)[keyof typeof ContactRequestBudget];
@@ -19,22 +16,3 @@ export const ContactRequestBudget = {
   "100k-plus": "100k-plus",
   "not-sure": "not-sure",
 } as const;
-
-export interface ContactRequest {
-  /** @minLength 2 */
-  name: string;
-  email: string;
-  company?: string;
-  /** @minLength 10 */
-  message: string;
-  budget?: ContactRequestBudget;
-}
-
-export interface ContactResponse {
-  success: boolean;
-  message: string;
-}
-
-export interface ErrorResponse {
-  error: string;
-}

@@ -1,0 +1,31 @@
+packages:
+  "framer-motion": "For creamy animations, scroll reveals, and dynamic hover effects"
+  "clsx": "Utility for conditionally joining classNames"
+  "tailwind-merge": "Utility for merging tailwind classes without conflicts"
+  "react-hook-form": "For robust contact form state management"
+  "@hookform/resolvers": "Zod resolver for react-hook-form"
+  "zod": "Schema validation for the contact form"
+
+images:
+  - path: "artifacts/portfolio/public/images/hero-bg.png"
+    description: "Abstract digital masterpiece, flowing global network data streams, particle connections, cinematic lighting, deep blues and electric purples, extremely dark background, subtle neon glowing code patterns, 8k, volumetric light"
+    aspect_ratio: "16:9"
+  - path: "artifacts/portfolio/public/images/agency-office.png"
+    description: "Ultra-modern, high-tech agency workspace, sleek minimal desks, multiple ultrawide monitors showing code, dark cinematic environment with subtle electric blue and purple accent lights, highly sophisticated"
+    aspect_ratio: "16:9"
+  - path: "artifacts/portfolio/public/images/project-fintech.png"
+    description: "Abstract representation of a futuristic fintech application dashboard, floating UI elements, dark mode, glowing charts and numbers, metallic greys and neon cyan highlights"
+    aspect_ratio: "4:3"
+  - path: "artifacts/portfolio/public/images/project-ai.png"
+    description: "Abstract visual of artificial intelligence brain or neural network, intricate glowing connections, dark deep space background, electric purple and magenta accents, highly detailed concept art"
+    aspect_ratio: "4:3"
+  - path: "artifacts/portfolio/public/images/project-health.png"
+    description: "Futuristic medical tech interface abstraction, glowing DNA helix or biometric data rings, clean minimal aesthetics, deep blue and bright white colors"
+    aspect_ratio: "4:3"
+  - path: "artifacts/portfolio/public/images/project-ecommerce.png"
+    description: "Abstract representation of global digital commerce, floating isometric shapes, glowing payment nodes, dark sleek background, sophisticated gold and electric blue accents"
+    aspect_ratio: "4:3"
+
+notes:
+  - Using generated hook from @workspace/api-client-react for the contact form submission.
+  - Expects standard Tailwind v4 setup with CSS variables.
