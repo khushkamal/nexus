@@ -25,9 +25,6 @@ export default defineConfig({
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
   },
-  optimizeDeps: {
-    include: ["@tanstack/react-query"],
-  },
   server: {
     port,
     host: "0.0.0.0",
