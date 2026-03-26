@@ -38,13 +38,13 @@ const SERVICES = [
     icon: <Cloud className="w-8 h-8" />,
     title: "Cloud Architecture",
     description:
-      "Resilient infrastructure design on AWS and GCP for zero-downtime global deployment.",
+      "Strategic planning of modular and scalable software systems with long-term reliability in mind.",
   },
   {
     icon: <Cpu className="w-8 h-8" />,
-    title: "AI Integration",
+    title: "Performance Optimization",
     description:
-      "Embedding cutting-edge LLMs and machine learning models into your product ecosystem.",
+      "Deep-level audit and optimization to ensure 99+ Lighthouse scores and lightning-fast interactions.",
   },
   {
     icon: <ShieldCheck className="w-8 h-8" />,
@@ -54,9 +54,9 @@ const SERVICES = [
   },
   {
     icon: <RefreshCw className="w-8 h-8" />,
-    title: "DevOps & CI/CD",
+    title: "Maintenance & Support",
     description:
-      "Automated pipelines, container orchestration, and zero-downtime deployments.",
+      "Reliable post-launch support and updates to keep your product running smoothly.",
   },
   {
     icon: <Lock className="w-8 h-8" />,

@@ -6,9 +6,6 @@ export const contactFormSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
   company: z.string().optional(),
   message: z.string().min(10, "Message must be at least 10 characters"),
-  budget: z
-    .enum(["under-10k", "10k-50k", "50k-100k", "100k-plus", "not-sure"])
-    .optional(),
 });
 
 export function useContactSubmission() {

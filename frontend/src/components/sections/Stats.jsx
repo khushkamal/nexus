@@ -5,16 +5,15 @@ import { MorphingBlob } from "@/components/MorphingBlob";
 import { ScrambleText } from "@/components/ScrambleText";
 
 const STATS = [
-  { value: 200, label: "Projects Delivered", suffix: "+", icon: Trophy },
-  { value: 98, label: "Client Satisfaction", suffix: "%", icon: Star },
-  { value: 14, label: "Years Experience", suffix: "+", icon: Calendar },
-  { value: 60, label: "Global Clients", suffix: "+", icon: Users },
+  { value: 100, label: "Commitment", suffix: "%", icon: Star },
+  { value: 99, label: "Uptime", suffix: ".9%", icon: TrendingUp },
+  { value: 24, label: "Support", suffix: "/7", icon: Users },
+  { value: 15, label: "Modern Techs", suffix: "+", icon: Trophy },
   {
-    value: 2,
-    label: "Revenue Generated",
-    suffix: "B+",
-    prefix: "$",
-    icon: TrendingUp,
+    value: 100,
+    label: "Clean Code",
+    suffix: "%",
+    icon: Calendar,
   },
 ];
 
@@ -73,7 +72,7 @@ export function Stats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold">
-            <ScrambleText text="Our Global Impact" className="text-white" />
+            <ScrambleText text="Driven by Quality" className="text-white" />
           </h2>
         </div>
 

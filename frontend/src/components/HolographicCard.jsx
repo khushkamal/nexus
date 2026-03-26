@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
-export function HolographicCard({ children, className }) {
+export function HolographicCard({ children, className, ...props }) {
   const ref = useRef(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [glare, setGlare] = useState({ x: 50, y: 50 });
@@ -35,6 +35,7 @@ export function HolographicCard({ children, className }) {
       ref={ref}
       onMouseMove={handleMove}
       onMouseLeave={reset}
+      {...props}
       animate={{ rotateX: tilt.x, rotateY: tilt.y }}
       transition={{ type: "spring", stiffness: 300, damping: 30 }}
       style={{ transformStyle: "preserve-3d", perspective: 1000 }}

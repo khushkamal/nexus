@@ -1,12 +1,12 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Loader2, Send } from "lucide-react";
-import { contactFormSchema, useContactSubmission } from "@/hooks/use-contact";
+import { Loader2, Send, Instagram } from "lucide-react";
+import { contactFormSchema } from "@/hooks/use-contact";
 import { useToast } from "@/hooks/use-toast";
 
 export function Contact() {
   const { toast } = useToast();
-  const mutation = useContactSubmission();
 
   const form = useForm({
     resolver: zodResolver(contactFormSchema),
@@ -15,30 +15,41 @@ export function Contact() {
       email: "",
       company: "",
       message: "",
-      budget: "not-sure",
     },
   });
 
-  const onSubmit = (data) => {
-    mutation.mutate(
-      { data },
-      {
-        onSuccess: () => {
-          toast({
-            title: "Message Sent Successfully",
-            description: "We'll be in touch within 24 hours.",
-          });
-          form.reset();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onSubmit = async (data) => {
+    setIsSubmitting(true);
+    try {
+      const response = await fetch("https://formspree.io/f/mpqowagp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
         },
-        onError: (error) => {
-          toast({
-            title: "Submission Failed",
-            description: error.message || "Please try again later.",
-            variant: "destructive",
-          });
-        },
-      },
-    );
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent Successfully",
+          description: "We'll be in touch within 24 hours.",
+        });
+        form.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Submission Failed",
+        description: error.message || "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -49,13 +60,12 @@ export function Contact() {
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
             <h2 className="text-5xl md:text-7xl font-display font-bold text-white mb-6">
-              Let's Build The <br />
-              <span className="text-primary">Future.</span>
+              Let's Talk <br />
+              <span className="text-primary">Strategy.</span>
             </h2>
             <p className="text-white/60 text-lg mb-12 max-w-md">
-              Whether you need a revolutionary web application or a complete
-              digital transformation, our engineers are ready to execute your
-              vision.
+              We're here to help you turn your ideas into digital reality with a 
+              human touch. Reach out to discuss your project, no matter the size.
             </p>
 
             <div className="space-y-8">
@@ -64,10 +74,10 @@ export function Contact() {
                   Email
                 </h4>
                 <a
-                  href="mailto:hello@nexus-agency.dev"
+                  href="mailto:nexusdev039@gmail.com"
                   className="text-2xl text-white hover:text-primary transition-colors"
                 >
-                  hello@nexus-agency.dev
+                  nexusdev039@gmail.com
                 </a>
               </div>
               <div>
@@ -75,10 +85,21 @@ export function Contact() {
                   Location
                 </h4>
                 <p className="text-xl text-white">
-                  100 Innovation Drive
-                  <br />
-                  San Francisco, CA 94105
+                  INDIA
                 </p>
+              </div>
+              <div>
+                <h4 className="text-white/40 text-sm font-semibold uppercase tracking-widest mb-2">
+                  Follow Us
+                </h4>
+                <a
+                  href="https://www.instagram.com/nexusdev01/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xl text-white hover:text-primary transition-colors flex items-center gap-2"
+                >
+                  <Instagram className="w-5 h-5" /> @nexusdev01
+                </a>
               </div>
             </div>
           </div>
@@ -132,21 +153,6 @@ export function Contact() {
                 />
               </div>
 
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-white/80">
-                  Project Budget
-                </label>
-                <select
-                  {...form.register("budget")}
-                  className="w-full bg-background/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all appearance-none"
-                >
-                  <option value="under-10k">Under $10,000</option>
-                  <option value="10k-50k">$10,000 - $50,000</option>
-                  <option value="50k-100k">$50,000 - $100,000</option>
-                  <option value="100k-plus">$100,000+</option>
-                  <option value="not-sure">Not sure yet</option>
-                </select>
-              </div>
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-white/80">
@@ -168,10 +174,10 @@ export function Contact() {
 
               <button
                 type="submit"
-                disabled={mutation.isPending}
+                disabled={isSubmitting}
                 className="w-full py-4 rounded-xl font-bold bg-primary text-white glow-primary hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                {mutation.isPending ? (
+                {isSubmitting ? (
                   <>
                     Processing <Loader2 className="w-5 h-5 animate-spin" />
                   </>

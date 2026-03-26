@@ -36,16 +36,16 @@ function OrbitalDiagram() {
     canvas.addEventListener("mouseleave", handleMouseLeave);
 
     const orbits = [
-      { radius: 100, speed: 0.005, items: ["React", "Python", "Go"] },
+      { radius: 100, speed: 0.005, items: ["React", "Node.js", "JavaScript"] },
       {
         radius: 160,
         speed: 0.003,
-        items: ["AWS", "Node.js", "K8s", "TypeScript"],
+        items: ["Tailwind", "Node.js", "Vite", "TypeScript"],
       },
       {
         radius: 220,
         speed: 0.002,
-        items: ["PostgreSQL", "TensorFlow", "Docker", "Redis", "GraphQL"],
+        items: ["PostgreSQL", "Prisma", "Framer Motion", "Redis", "GraphQL"],
       },
     ];
 
@@ -130,26 +130,24 @@ export function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6 leading-tight">
-              Engineering the <br />
-              <span className="text-gradient-primary">Impossible</span>
+              Building Your <br />
+              <span className="text-gradient-primary">Digital Presence</span>
             </h2>
             <p className="text-white/60 text-lg mb-10 leading-relaxed max-w-xl">
-              NEXUS was founded on a singular premise: to build software that
-              feels like magic. We are a collective of elite engineers,
-              visionary designers, and strategic thinkers dedicated to pushing
-              the boundaries of what's possible on the web.
+              NEXUS is your <span className="text-primary font-medium">trusted partner for friendly, accessible, and high-quality development</span>. 
+              We are a team focused on helping brands launch and scale with modern technology.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-12">
               {[
-                "Uncompromising Code Quality",
-                "Rapid 8-Week Delivery",
-                "Award-Winning Visual Design",
-                "Dedicated Team Pod",
-                "Scalable Enterprise Architecture",
-                "24/7 Global Support",
-                "Agile & Transparent Delivery",
-                "IP Rights Fully Transferred",
+                "Modern Tech-Stack Mastery",
+                "Pixel-Perfect Implementation",
+                "Responsive & Mobile-First",
+                "Clean & Maintainable Code",
+                "Performance-First Approach",
+                "Direct Communication",
+                "Agile Development Cycle",
+                "Seamless Project Delivery",
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
@@ -161,7 +159,7 @@ export function About() {
             </div>
 
             <button className="px-8 py-4 rounded-full font-bold bg-white text-background hover:bg-transparent hover:text-white border-2 border-white transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:shadow-none hover:border-white/20">
-              Meet The Leadership
+              Get Started
             </button>
           </motion.div>
 
@@ -182,7 +180,7 @@ export function About() {
           </motion.div>
         </div>
 
-        {/* Awards Strip */}
+        {/* Our Approach Strip */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -192,21 +190,21 @@ export function About() {
         >
           <div className="text-center mb-8">
             <span className="text-white/40 uppercase tracking-widest text-sm font-semibold flex items-center justify-center gap-2">
-              <Award className="w-4 h-4 text-primary" /> Industry Recognition
+              <Award className="w-4 h-4 text-primary" /> Our Core Values
             </span>
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "Awwwards Site of the Year 2023",
-              "Clutch Top Agency 2024",
-              "Webby Award Winner",
-              "Forbes Top 50 Tech Agency",
-            ].map((award) => (
+              "Quality Over Quantity",
+              "User-Centric Design",
+              "Scalable Codebase",
+              "Transparent Partnerships",
+            ].map((value) => (
               <div
-                key={award}
+                key={value}
                 className="px-6 py-3 rounded-full glass-panel border border-white/5 text-white/80 font-medium text-sm md:text-base hover:bg-white/5 hover:border-primary/30 transition-all cursor-default hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(139,92,246,0.15)]"
               >
-                {award}
+                {value}
               </div>
             ))}
           </div>

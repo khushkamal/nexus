@@ -7,45 +7,17 @@ import { MorphingBlob } from "@/components/MorphingBlob";
 const TESTIMONIALS = [
   {
     quote:
-      "NEXUS transformed our fintech platform into an industry benchmark. The engineering quality is second to none.",
-    author: "Sarah Chen",
-    role: "CTO at Aura Financial",
-    initials: "SC",
+      "NEXUS ne hamari boutique ke liye ek dum stunning website banayi hai. Design bahut modern hai aur mere clients ko experience kaafi smooth lagta hai.",
+    author: "Aditi Rao",
+    role: "Founder, Urban Chic",
+    initials: "AR",
   },
   {
     quote:
-      "The AI integration they built reduced our processing time by 80%. Absolutely extraordinary team.",
-    author: "Marcus Webb",
-    role: "CEO at Synapse AI",
-    initials: "MW",
-  },
-  {
-    quote:
-      "From concept to launch in 8 weeks. The design blew our board away. Unmatched speed and quality.",
-    author: "Priya Sharma",
-    role: "VP Product at Nova Health",
-    initials: "PS",
-  },
-  {
-    quote:
-      "Our conversion rate increased 340% after NEXUS rebuilt our e-commerce platform. ROI was immediate.",
-    author: "Daniel Park",
-    role: "CMO at Lumina Commerce",
-    initials: "DP",
-  },
-  {
-    quote:
-      "They don't just build software — they build competitive moats. A true strategic technology partner.",
-    author: "Elena Vasquez",
-    role: "Founder at Vertex Analytics",
-    initials: "EV",
-  },
-  {
-    quote:
-      "The Kubernetes infrastructure they designed handles 10x our traffic with zero downtime. Phenomenal.",
-    author: "James Liu",
-    role: "CTO at Halo Logistics",
-    initials: "JL",
+      "Inke saath kaam karna bahut easy tha. Hamara MVP record time mein deliver ho gaya aur quality mein koi compromise nahi kiya gaya.",
+    author: "Rahul Mehta",
+    role: "Co-founder, QuickSaaS",
+    initials: "RM",
   },
 ];
 

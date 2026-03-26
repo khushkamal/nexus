@@ -4,24 +4,24 @@ import { Terminal } from "lucide-react";
 
 const SKILLS = [
   { name: "React & Next.js", value: 98 },
-  { name: "Node.js & Go", value: 95 },
-  { name: "Cloud Infrastructure", value: 92 },
-  { name: "Machine Learning / AI", value: 88 },
+  { name: "Node.js & Express", value: 95 },
+  { name: "Progressive Web Apps", value: 92 },
+  { name: "Backend Architecture", value: 88 },
   { name: "TypeScript", value: 97 },
   { name: "Mobile (React Native)", value: 90 },
   { name: "Database Architecture", value: 93 },
-  { name: "DevOps & Security", value: 89 },
+  { name: "SEO & Accessibility", value: 89 },
 ];
 
 const BLOCKS = [
   [
-    "$ nexus deploy --env production",
+    "$ nexus build --env production",
     "> Analyzing 47,832 lines of code...",
     "> Running 2,847 test cases... ✓ ALL PASSED",
-    "> Building Docker image [==========] 100%",
-    "> Pushing to AWS ECS cluster...",
-    "> Health checks: ✓ 6/6 replicas healthy",
-    "> 🚀 Deployed to prod in 47s. Zero downtime.",
+    "> Optimizing assets [==========] 100%",
+    "> Compiling production bundle...",
+    "> Logic check: ✓ ALL SYSTEMS OPERATIONAL",
+    "> 🚀 Optimized & Ready in 47s.",
   ],
 
   [
@@ -31,7 +31,7 @@ const BLOCKS = [
     "> SQL Injection: ✓ PROTECTED",
     "> XSS Vectors: ✓ SANITIZED",
     "> Auth tokens: ✓ ROTATED",
-    "> Security Score: 98/100 — ELITE",
+    "> Security Score: 98/100 — VERIFIED",
   ],
 
   [
@@ -46,17 +46,17 @@ const BLOCKS = [
 
   [
     "$ nexus stats --global",
-    "> Active deployments: 23",
-    "> Requests/sec (peak): 847,293",
-    "> Avg response time: 12ms",
-    "> Uptime (12 months): 99.97%",
-    "> Data processed: 2.4 TB/day",
-    "> Client satisfaction: 98.4%",
+    "> Active projects: 12",
+    "> Requests/sec (peak): 1,240",
+    "> Avg response time: 45ms",
+    "> Uptime (last month): 99.99%",
+    "> Data processed: 15 GB/day",
+    "> Client satisfaction: 100%",
   ],
 ];
 
 const LOGOS =
-  "React • TypeScript • Next.js • Node.js • Python • Go • Rust • AWS • GCP • Docker • Kubernetes • PostgreSQL • Redis • TensorFlow • GraphQL • React Native • ";
+  "React • TypeScript • Next.js • Node.js • Python • Rust • Tailwind • Prisma • PostgreSQL • Redis • Framer Motion • GraphQL • React Native • ";
 
 export function TechShowcase() {
   const containerRef = useRef(null);

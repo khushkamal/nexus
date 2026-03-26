@@ -4,37 +4,27 @@ import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { HolographicCard } from "@/components/HolographicCard";
 
-const CATEGORIES = ["All", "Web App", "Mobile", "AI/ML", "Enterprise"];
+const CATEGORIES = ["All", "Web App", "Mobile", "Fintech", "Enterprise"];
 
 const PROJECTS = [
   {
-    title: "Aura Financial",
+    title: "Zen-Geo",
     category: "Web App",
-    tech: ["React", "TypeScript", "Node.js"],
-    image: "project-fintech.png",
+    tech: ["React", "Leaflet", "Tailwind"],
+    image: "https://images.unsplash.com/photo-1584931423298-c576fda54bd2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    link: "https://note-geo.vercel.app/",
   },
   {
-    title: "Synapse AI",
-    category: "AI/ML",
-    tech: ["Next.js", "Python", "TensorFlow"],
-    image: "project-ai.png",
-  },
-  {
-    title: "Vertex Analytics",
-    category: "Enterprise",
-    tech: ["TypeScript", "D3.js", "PostgreSQL"],
-    image: "project-fintech.png",
+    title: "AI Shopping Assistant",
+    category: "Fintech",
+    tech: ["Next.js", "OpenAI", "Tailwind"],
+    image: "https://media.istockphoto.com/id/2201598683/photo/ai-e-commerce-concept-artificial-intelligence-service-tools-for-ecommerce-digital-marketing.jpg?s=1024x1024&w=is&k=20&c=PfZlOJEjQU2TGukewRglpvzWNQ1LATnFT7a7IIGaRwc=",
+    link: "https://ai-shopping-nu.vercel.app/",
   },
   {
     title: "Lumina Commerce",
     category: "Web App",
-    tech: ["Shopify Plus", "React", "AWS"],
-    image: "project-ecommerce.png",
-  },
-  {
-    title: "Halo Logistics",
-    category: "Enterprise",
-    tech: ["Go", "Kubernetes", "React"],
+    tech: ["Shopify Plus", "React", "Next.js"],
     image: "project-ecommerce.png",
   },
   {
@@ -73,12 +63,12 @@ export function Projects() {
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel mb-6 border-white/5">
                 <span className="text-xs font-semibold tracking-widest uppercase text-white/80">
-                  Selected Works
+                  Expertise Showcase
                 </span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-                Featured{" "}
-                <span className="text-accent text-glow-accent">Projects</span>
+                Our{" "}
+                <span className="text-accent text-glow-accent">Capabilities</span>
               </h2>
             </div>
 
@@ -116,10 +106,13 @@ export function Projects() {
                 key={project.title}
                 className="w-[85vw] sm:w-[500px] shrink-0"
               >
-                <HolographicCard className="h-[calc(100vh-320px)] min-h-[400px] rounded-3xl cursor-pointer">
+                <HolographicCard 
+                  onClick={() => project.link && window.open(project.link, '_blank')}
+                  className="h-[calc(100vh-320px)] min-h-[400px] rounded-3xl cursor-pointer"
+                >
                   <div className="absolute inset-0 w-full h-full overflow-hidden bg-background rounded-3xl">
                     <img
-                      src={`${import.meta.env.BASE_URL}images/${project.image}`}
+                      src={project.image.startsWith('http') ? project.image : `${import.meta.env.BASE_URL}images/${project.image}`}
                       alt={project.title}
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-all duration-1000 ease-out opacity-60 group-hover:opacity-40 group-hover:[filter:drop-shadow(-2px_0_0_rgba(255,0,128,0.3))_drop-shadow(2px_0_0_rgba(0,200,255,0.3))]"
                     />
@@ -132,7 +125,7 @@ export function Projects() {
 
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-4 group-hover:translate-y-0 z-20">
                     <span className="px-6 py-3 rounded-full bg-white text-background font-bold flex items-center gap-2 shadow-2xl">
-                      View Case Study <ArrowUpRight className="w-5 h-5" />
+                      {project.link ? "Open Live Site" : "Explore Implementation"} <ArrowUpRight className="w-5 h-5" />
                     </span>
                   </div>
 

@@ -1,8 +1,6 @@
 import {
   Hexagon,
-  Github,
-  Twitter,
-  Linkedin,
+  Instagram,
   ArrowUpCircle,
 } from "lucide-react";
 
@@ -29,27 +27,17 @@ export function Footer() {
               </div>
             </a>
             <p className="text-white/60 mb-8 leading-relaxed">
-              Engineering digital masterpieces since 2011. We build the
-              infrastructure for the next generation of industry leaders.
+              Crafting accessible, high-quality, and friendly digital solutions. 
+              We help startups and ambitious businesses grow through modern technology.
             </p>
             <div className="flex items-center gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/nexusdev01/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-white/60 hover:text-white hover:bg-primary hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)]"
               >
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-white/60 hover:text-white hover:bg-primary hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)]"
-              >
-                <Github className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-white/60 hover:text-white hover:bg-primary hover:border-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(139,92,246,0.5)]"
-              >
-                <Linkedin className="w-4 h-4" />
+                <Instagram className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -64,9 +52,9 @@ export function Footer() {
                 "Web Applications",
                 "Mobile Development",
                 "UI/UX Design",
-                "Cloud Architecture",
-                "AI Integration",
-                "Enterprise Software",
+                "Software Architecture",
+                "Cloud Solutions",
+                "Maintenance & Support",
               ].map((item) => (
                 <li key={item}>
                   <a
@@ -147,15 +135,13 @@ export function Footer() {
             </h4>
             <div className="space-y-4 mb-8">
               <a
-                href="mailto:hello@nexus-agency.dev"
+                href="mailto:nexusdev039@gmail.com"
                 className="block text-white/60 hover:text-white transition-colors text-sm"
               >
-                hello@nexus-agency.dev
+                nexusdev039@gmail.com
               </a>
               <p className="text-white/60 text-sm">
-                100 Innovation Drive
-                <br />
-                San Francisco, CA 94105
+                INDIA
               </p>
             </div>
             <a
@@ -170,7 +156,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-white/40 text-sm text-center md:text-left">
-            &copy; {new Date().getFullYear()} Nexus Development Agency. All
+            &copy; {new Date().getFullYear()} Nexus Web Studio. All
             rights reserved.
           </div>
 

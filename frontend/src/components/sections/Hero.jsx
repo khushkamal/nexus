@@ -99,8 +99,8 @@ function MagneticButton({ children, href, className, primary }) {
 
 const PHRASES = [
   "Digital Masterpieces",
-  "Enterprise Software",
-  "Global Experiences",
+  "Tailored Software",
+  "User Experiences",
 ];
 
 export function Hero() {
@@ -265,7 +265,7 @@ export function Hero() {
         >
           <Sparkles className="w-4 h-4 text-primary" />
           <span className="text-sm font-medium text-white/90">
-            Premium Digital Agency
+            Modern Web Studio
           </span>
         </motion.div>
 
@@ -275,7 +275,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold font-display leading-[1.1] tracking-tight mb-6 h-[120px] md:h-[180px] lg:h-[200px]"
         >
-          <span className="text-white">Engineering</span> <br />
+          <span className="text-white">Crafting</span> <br />
           <span className="text-gradient-primary">{displayText}</span>
           <span className="animate-pulse text-primary">|</span>
         </motion.h1>
@@ -286,8 +286,8 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="max-w-2xl text-lg md:text-xl text-white/60 mb-8 font-light"
         >
-          We build visionary web applications and robust software solutions for
-          global brands that demand unparalleled performance and aesthetics.
+          Your trusted partner for <span className="text-primary font-medium">accessible, high-quality & friendly development</span>. 
+          We build digital solutions that help startups and ambitious businesses grow.
         </motion.p>
 
         {/* Floating Badges */}
@@ -297,7 +297,7 @@ export function Hero() {
           transition={{ delay: 0.6, duration: 1 }}
           className="flex flex-wrap justify-center gap-3 mb-10 max-w-3xl"
         >
-          {["React", "Node.js", "AWS", "TypeScript", "Python"].map(
+          {["React", "Vite", "Tailwind", "Node.js", "TypeScript"].map(
             (badge, i) => (
               <motion.div
                 key={badge}
@@ -323,14 +323,14 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-4"
         >
           <MagneticButton href="#work" primary>
-            View Our Work
+            View My Work
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </MagneticButton>
-          <MagneticButton href="#contact">Start a Project</MagneticButton>
+          <MagneticButton href="#contact">Let's Connect</MagneticButton>
         </motion.div>
       </motion.div>
 
-      {/* Client Logos Strip */}
+      {/* Simplified Tech Strip */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -338,15 +338,15 @@ export function Hero() {
         className="absolute bottom-24 w-full flex flex-col items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-500 pointer-events-none z-20"
       >
         <span className="text-xs uppercase tracking-[0.2em] text-white/40 mb-4 font-mono">
-          Trusted by industry leaders
+          Focusing on Modern Standards
         </span>
         <div className="flex gap-8 md:gap-16 items-center justify-center px-4 overflow-hidden">
-          {["AURA", "SYNAPSE", "LUMINA", "VERTEX", "HALO"].map((logo) => (
+          {["CLEAN CODE", "FAST PERFORMANCE", "RESPONSIVE", "USER DRIVEN"].map((text) => (
             <span
-              key={logo}
-              className="font-display font-bold text-xl md:text-2xl text-white/30 tracking-widest"
+              key={text}
+              className="font-display font-bold text-sm md:text-base text-white/30 tracking-widest"
             >
-              {logo}
+              {text}
             </span>
           ))}
         </div>

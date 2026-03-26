@@ -19,13 +19,13 @@ const STEPS = [
   {
     num: "03",
     title: "Engineering",
-    desc: "Elite engineers build with bulletproof code, rigorous testing, and performance obsession.",
+    desc: "Our developers build with clean, maintainable code, rigorous testing, and a focus on performance.",
     icon: Code2,
   },
   {
     num: "04",
     title: "Launch & Scale",
-    desc: "We deploy to global infrastructure and monitor performance, iterating for continuous excellence.",
+    desc: "We launch your project and ensure it runs smoothly, iterating based on real user feedback for continuous improvement.",
     icon: Rocket,
   },
 ];
