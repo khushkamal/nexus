@@ -6,7 +6,8 @@
     "dev": "npm run dev --workspaces --if-present",
     "dev:frontend": "npm run dev --workspace=@workspace/portfolio",
     "dev:backend": "npm run dev --workspace=@workspace/api-server",
-    "build": "npm run build --workspaces --if-present"
+    "build": "npm run build --workspaces --if-present",
+    "lint": "eslint . --ext .js,.jsx"
   },
   "workspaces": [
     "frontend",
@@ -22,6 +23,10 @@
     "@babel/preset-react": "^7.28.5",
     "@babel/preset-typescript": "^7.28.5",
     "@tanstack/react-query": "5.90.21",
+    "eslint": "^9.20.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.0.0",
     "glob": "^13.0.6",
     "prettier": "^3.8.1"
   }
